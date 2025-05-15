@@ -27,7 +27,7 @@ jobs:
           ./app
     
     - name: Upload SARIF report to Security Dashboard
-      uses: github/codeql-actionupload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: sarif-results.sarif
 
