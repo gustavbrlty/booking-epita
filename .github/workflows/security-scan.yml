@@ -19,12 +19,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run OSV Scanner
-      uses: google/osv-scanner-action@v2
+      uses: google/osv-scanner-action/osv-scanner-action@v2
       with:
-        args: '--recursive . --format sarif --output sarif-results.sarif'
+        scan-args: '--format --output sarif-results.sarif ./app'
     
     - name: Upload SARIF report to Security Dashboard
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-actionupload-sarif@v2
       with:
         sarif_file: sarif-results.sarif
 
