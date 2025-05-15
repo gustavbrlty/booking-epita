@@ -21,7 +21,10 @@ jobs:
     - name: Run OSV Scanner
       uses: google/osv-scanner-action/osv-scanner-action@v2
       with:
-        scan-args: '--format --output sarif-results.sarif ./app'
+        scan-args: --
+          --format
+          --output sarif-results.sarif 
+          ./app
     
     - name: Upload SARIF report to Security Dashboard
       uses: github/codeql-actionupload-sarif@v2
