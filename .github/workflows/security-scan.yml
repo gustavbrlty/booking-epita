@@ -29,7 +29,7 @@ jobs:
     - name: Upload SARIF report to Security Dashboard
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: sarif-results.sarif
+        sarif_file: ./sarif-results.sarif
 
     # Optional: Add notification step (Slack, Email, etc.)
     # - name: Send Security Alert
